@@ -13,7 +13,6 @@ after_success:
     - docker build -t gordonwh/multi-nginx ./nginx
     - docker build -t gordonwh/multi-server ./server
     - docker build -t gordonwh/multi-worker ./worker
-
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
     - docker push gordonwh/multi-client
     - docker push gordonwh/multi-nginx
